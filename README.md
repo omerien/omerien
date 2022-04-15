@@ -6,6 +6,6 @@ My principal account:
 
 ![](https://github-readme-stats.vercel.app/api?username=omerien&count_private=true&show_icons=true&theme=dark&hide_title=true)
 
-My alt account:
+My alt account (omerien2):
 
 ![](https://github-readme-stats.vercel.app/api?username=omerien2&count_private=true&show_icons=true&theme=dark&hide_title=true)

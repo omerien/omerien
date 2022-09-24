@@ -4,7 +4,7 @@ I'm coding actually in Python, and have knowledge in HTML, PHP and a little bit 
 
 My principal account:
 
-[](https://github-readme-stats.vercel.app/api?username=omerien&count_private=true&show_icons=true&theme=dark&hide_title=true)
+[!(https://github-readme-stats.vercel.app/api?username=omerien&count_private=true&show_icons=true&theme=dark&hide_title=true]
 
 <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=omerien&theme=tokyonight" />
 

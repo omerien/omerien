@@ -1,0 +1,694 @@
+-------------------------------------
+Translated Report (Full Report Below)
+-------------------------------------
+
+Process:               Progressbar95 [15629]
+Path:                  /Users/USER/Library/Application Support/Steam/*/Progressbar95.app/Contents/MacOS/Progressbar95
+Identifier:            com.example.Progressbar95
+Version:               1.0.2.0 (2024.2.121303)
+Code Type:             ARM-64 (Native)
+Parent Process:        launchd [1]
+User ID:               502
+
+Date/Time:             2024-03-22 19:14:11.3033 +0100
+OS Version:            macOS 14.3.1 (23D60)
+Report Version:        12
+Anonymous UUID:        AEC90528-CB7C-D8C8-D513-823044636BA7
+
+Sleep/Wake UUID:       D59E4373-4670-4C23-9D8F-301771DAEF08
+
+Time Awake Since Boot: 170000 seconds
+Time Since Wake:       1721 seconds
+
+System Integrity Protection: disabled
+
+Crashed Thread:        0  MainThrd  Dispatch queue: com.apple.main-thread
+
+Exception Type:        EXC_BAD_ACCESS (SIGSEGV)
+Exception Codes:       KERN_INVALID_ADDRESS at 0x00000000000000b8
+Exception Codes:       0x0000000000000001, 0x00000000000000b8
+
+Termination Reason:    Namespace SIGNAL, Code 11 Segmentation fault: 11
+Terminating Process:   exc handler [15629]
+
+VM Region Info: 0xb8 is not in any region.  Bytes before following region: 4377329480
+      REGION TYPE                    START - END         [ VSIZE] PRT/MAX SHRMOD  REGION DETAIL
+      UNUSED SPACE AT START
+--->  
+      __TEXT                      104e8c000-104e94000    [   32K] r-x/r-x SM=COW  ...Progressbar95
+
+Thread 0 Crashed:: MainThrd Dispatch queue: com.apple.main-thread
+0   AppleMetalOpenGLRenderer      	       0x10a36e204 gldUpdateReadFramebuffer + 48
+1   AppleMetalOpenGLRenderer      	       0x10a37101c gldPresentFramebufferData + 800
+2   GLEngine                      	       0x1ec1cb2c8 glSwap_Exec + 132
+3   OpenGL                        	       0x1ebfc93b0 CGLFlushDrawable + 64
+4   gameoverlayrenderer.dylib     	       0x1053ddf08 0x1053cc000 + 73480
+5   AppKit                        	       0x1873218c4 -[NSOpenGLContext flushBuffer] + 28
+6   AppKit                        	       0x1877cc478 -[_NSOpenGLViewBackingLayer display] + 716
+7   QuartzCore                    	       0x18b98bb3c CA::Layer::display_if_needed(CA::Transaction*) + 736
+8   QuartzCore                    	       0x18bb10da4 CA::Context::commit_transaction(CA::Transaction*, double, double*) + 512
+9   QuartzCore                    	       0x18b96e8f0 CA::Transaction::commit() + 648
+10  AppKit                        	       0x18719cb18 __62+[CATransaction(NSCATransaction) NS_setFlushesWithDisplayLink]_block_invoke + 272
+11  AppKit                        	       0x187b52f04 ___NSRunLoopObserverCreateWithHandler_block_invoke + 64
+12  CoreFoundation                	       0x183896d80 __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 36
+13  CoreFoundation                	       0x183896c6c __CFRunLoopDoObservers + 532
+14  CoreFoundation                	       0x18389629c __CFRunLoopRun + 776
+15  CoreFoundation                	       0x18389593c CFRunLoopRunSpecific + 608
+16  HIToolbox                     	       0x18de5e448 RunCurrentEventLoopInMode + 292
+17  HIToolbox                     	       0x18de5e284 ReceiveNextEventCommon + 648
+18  HIToolbox                     	       0x18de5dfdc _BlockUntilNextEventMatchingListInModeWithFilter + 76
+19  AppKit                        	       0x187074ed0 _DPSNextEvent + 660
+20  AppKit                        	       0x18785feec -[NSApplication(NSEventRouting) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 716
+21  gameoverlayrenderer.dylib     	       0x1053e76fc 0x1053cc000 + 112380
+22  AppKit                        	       0x18706837c -[NSApplication run] + 476
+23  AppKit                        	       0x18703f640 NSApplicationMain + 880
+24  dyld                          	       0x1834390e0 start + 2360
+
+Thread 1:
+0   libsystem_pthread.dylib       	       0x1837b4e28 start_wqthread + 0
+
+Thread 2:
+0   libsystem_pthread.dylib       	       0x1837b4e28 start_wqthread + 0
+
+Thread 3:
+0   libsystem_pthread.dylib       	       0x1837b4e28 start_wqthread + 0
+
+Thread 4:
+0   libsystem_pthread.dylib       	       0x1837b4e28 start_wqthread + 0
+
+Thread 5:: caulk.messenger.shared:17
+0   libsystem_kernel.dylib        	       0x1837797f0 semaphore_wait_trap + 8
+1   caulk                         	       0x18db5a690 caulk::semaphore::timed_wait(double) + 212
+2   caulk                         	       0x18db5a544 caulk::concurrent::details::worker_thread::run() + 36
+3   caulk                         	       0x18db5a244 void* caulk::thread_proxy<std::__1::tuple<caulk::thread::attributes, void (caulk::concurrent::details::worker_thread::*)(), std::__1::tuple<caulk::concurrent::details::worker_thread*>>>(void*) + 96
+4   libsystem_pthread.dylib       	       0x1837ba034 _pthread_start + 136
+5   libsystem_pthread.dylib       	       0x1837b4e3c thread_start + 8
+
+Thread 6:: caulk.messenger.shared:high
+0   libsystem_kernel.dylib        	       0x1837797f0 semaphore_wait_trap + 8
+1   caulk                         	       0x18db5a690 caulk::semaphore::timed_wait(double) + 212
+2   caulk                         	       0x18db5a544 caulk::concurrent::details::worker_thread::run() + 36
+3   caulk                         	       0x18db5a244 void* caulk::thread_proxy<std::__1::tuple<caulk::thread::attributes, void (caulk::concurrent::details::worker_thread::*)(), std::__1::tuple<caulk::concurrent::details::worker_thread*>>>(void*) + 96
+4   libsystem_pthread.dylib       	       0x1837ba034 _pthread_start + 136
+5   libsystem_pthread.dylib       	       0x1837b4e3c thread_start + 8
+
+Thread 7:: caulk::deferred_logger
+0   libsystem_kernel.dylib        	       0x1837797f0 semaphore_wait_trap + 8
+1   caulk                         	       0x18db5a690 caulk::semaphore::timed_wait(double) + 212
+2   caulk                         	       0x18db5a544 caulk::concurrent::details::worker_thread::run() + 36
+3   caulk                         	       0x18db5a244 void* caulk::thread_proxy<std::__1::tuple<caulk::thread::attributes, void (caulk::concurrent::details::worker_thread::*)(), std::__1::tuple<caulk::concurrent::details::worker_thread*>>>(void*) + 96
+4   libsystem_pthread.dylib       	       0x1837ba034 _pthread_start + 136
+5   libsystem_pthread.dylib       	       0x1837b4e3c thread_start + 8
+
+Thread 8:: com.apple.audio.IOThread.client
+0   libsystem_kernel.dylib        	       0x183779874 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x18378bcf0 mach_msg2_internal + 80
+2   libsystem_kernel.dylib        	       0x1837824b0 mach_msg_overwrite + 476
+3   libsystem_kernel.dylib        	       0x183779bf8 mach_msg + 24
+4   CoreAudio                     	       0x186105860 HALB_MachPort::SendSimpleMessageWithSimpleReply(unsigned int, unsigned int, int, int&, bool, unsigned int) + 96
+5   CoreAudio                     	       0x185fdc3c4 HALC_ProxyIOContext::IOWorkLoop() + 4260
+6   CoreAudio                     	       0x185fdabf0 invocation function for block in HALC_ProxyIOContext::HALC_ProxyIOContext(unsigned int, unsigned int) + 108
+7   CoreAudio                     	       0x186159f2c HALC_IOThread::Entry(void*) + 88
+8   libsystem_pthread.dylib       	       0x1837ba034 _pthread_start + 136
+9   libsystem_pthread.dylib       	       0x1837b4e3c thread_start + 8
+
+Thread 9:
+0   libsystem_kernel.dylib        	       0x18377ce68 __semwait_signal + 8
+1   libsystem_c.dylib             	       0x18365c2f8 nanosleep + 220
+2   libsystem_c.dylib             	       0x18365c210 usleep + 68
+3   ALmixer                       	       0x105393a14 Stream_Data_Thread_Callback + 144
+4   ALmixer                       	       0x10539b2b8 Internal_RunThread + 52
+5   libsystem_pthread.dylib       	       0x1837ba034 _pthread_start + 136
+6   libsystem_pthread.dylib       	       0x1837b4e3c thread_start + 8
+
+Thread 10:
+0   libsystem_pthread.dylib       	       0x1837b4e28 start_wqthread + 0
+
+Thread 11:: com.apple.NSEventThread
+0   libsystem_kernel.dylib        	       0x183779874 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x18378bcf0 mach_msg2_internal + 80
+2   libsystem_kernel.dylib        	       0x1837824b0 mach_msg_overwrite + 476
+3   libsystem_kernel.dylib        	       0x183779bf8 mach_msg + 24
+4   CoreFoundation                	       0x183897b84 __CFRunLoopServiceMachPort + 160
+5   CoreFoundation                	       0x18389644c __CFRunLoopRun + 1208
+6   CoreFoundation                	       0x18389593c CFRunLoopRunSpecific + 608
+7   AppKit                        	       0x18719e160 _NSEventThread + 144
+8   libsystem_pthread.dylib       	       0x1837ba034 _pthread_start + 136
+9   libsystem_pthread.dylib       	       0x1837b4e3c thread_start + 8
+
+Thread 12:
+0   libsystem_pthread.dylib       	       0x1837b4e28 start_wqthread + 0
+
+Thread 13:
+0   libsystem_pthread.dylib       	       0x1837b4e28 start_wqthread + 0
+
+Thread 14:
+0   libsystem_pthread.dylib       	       0x1837b4e28 start_wqthread + 0
+
+
+Thread 0 crashed with ARM Thread State (64-bit):
+    x0: 0x0000000118040000   x1: 0x0000000080000000   x2: 0x0000000000000e10   x3: 0x00000000000008cc
+    x4: 0x0000000000000e10   x5: 0x00000000000008cc   x6: 0x0000000000000000   x7: 0x0000000000000000
+    x8: 0x0000000000000000   x9: 0x00000000ffffffff  x10: 0x0000000118049420  x11: 0x000000011800c588
+   x12: 0x0000000118048e84  x13: 0x0000000000000001  x14: 0x000000011804ac90  x15: 0x0000000000000000
+   x16: 0x0000000118048e8b  x17: 0x0000000000000000  x18: 0x0000000000000000  x19: 0x0000000118040000
+   x20: 0x0000600000390740  x21: 0x0000000000000000  x22: 0x0000000120e1e95c  x23: 0x0000000120e1e920
+   x24: 0x00006000003e6d80  x25: 0x0000600000395f80  x26: 0x0000600000390740  x27: 0x0000600000397500
+   x28: 0x000000011804acfc   fp: 0x000000016af6fdd0   lr: 0x460980010a37101c
+    sp: 0x000000016af6fdc0   pc: 0x000000010a36e204 cpsr: 0x20001000
+   far: 0x00000000000000b8  esr: 0x92000006 (Data Abort) byte read Translation fault
+
+Binary Images:
+       0x134928000 -        0x135203fff com.apple.audio.codecs.Components (7.0) <d4d6ca9f-abef-319f-aca0-1fbdbf4df379> /System/Library/Components/AudioCodecs.component/Contents/MacOS/AudioCodecs
+       0x130000000 -        0x1309cffff com.apple.audio.AudioDSPComponents (1.0) <dc182fc2-dd27-39e3-b3fd-acfb178f67f0> /System/Library/Components/AudioDSP.component/Contents/MacOS/AudioDSP
+       0x1208f0000 -        0x120a27fff com.apple.audio.units.Components (1.14) <ad1547a3-5cdf-3a4b-8348-c8a3a7c78cc9> /System/Library/Components/CoreAudio.component/Contents/MacOS/CoreAudio
+       0x125804000 -        0x126c93fff steamclient.dylib (*) <e73dde52-7ac1-35c5-961f-862224ac0e4f> /Users/USER/Library/Application Support/Steam/*/steamclient.dylib
+       0x1200cc000 -        0x1200e7fff libtier0_s.dylib (*) <dc526769-313d-3fc7-a1d2-7c68bb3744af> /Users/USER/Library/Application Support/Steam/*/libtier0_s.dylib
+       0x120000000 -        0x12002bfff libvstdlib_s.dylib (*) <c1ff8178-ea49-39dd-9cba-9c709b443c78> /Users/USER/Library/Application Support/Steam/*/libvstdlib_s.dylib
+       0x120164000 -        0x120173fff libaudio.dylib (*) <377940f8-84c0-39e0-b142-275d3fa487d5> /Users/USER/Library/Application Support/Steam/*/libaudio.dylib
+       0x120104000 -        0x12011bfff crashhandler.dylib (*) <cf413730-0e42-3290-bdfe-07a887035c32> /Users/USER/Library/Application Support/Steam/*/crashhandler.dylib
+       0x120130000 -        0x120137fff com.googlecode.google-breakpad (*) <eb859872-955a-315d-9ce1-87fb57f7c4cd> /Users/USER/Library/Application Support/Steam/*/Breakpad.framework/Versions/A/Breakpad
+       0x1201fc000 -        0x12020bfff breakpadUtilities.dylib (*) <f81b68a1-e8e8-3f7c-8e42-be3c57699fc9> /Users/USER/Library/Application Support/Steam/*/Breakpad.framework/Versions/A/Resources/breakpadUtilities.dylib
+       0x117f70000 -        0x117f8ffff plugin_steamworks.dylib (*) <3f2bdaeb-1cca-337b-bdca-464a2e5b01dc> /Users/USER/Library/Application Support/Steam/*/Progressbar95.app/Contents/Plugins/plugin_steamworks.dylib
+       0x120098000 -        0x1200a3fff libsteam_api.dylib (*) <99b16acf-04cf-3fc6-80a6-9bc69fb1d440> /Users/USER/Library/Application Support/Steam/*/Progressbar95.app/Contents/Plugins/libsteam_api.dylib
+       0x1127d0000 -        0x1127d3fff plugin_utf8.dylib (*) <6b2f013c-780d-38dd-8cae-2b53e10f8ce1> /Users/USER/Library/Application Support/Steam/*/Progressbar95.app/Contents/Plugins/plugin_utf8.dylib
+       0x10a334000 -        0x10a39ffff com.apple.AppleMetalOpenGLRenderer (1.0) <72c22333-9dbf-3856-99f1-716fc2b10726> /System/Library/Extensions/AppleMetalOpenGLRenderer.bundle/Contents/MacOS/AppleMetalOpenGLRenderer
+       0x10519c000 -        0x1051a7fff libobjc-trampolines.dylib (*) <39d1d8d0-6996-3bd4-8ce9-39512bb65c82> /usr/lib/libobjc-trampolines.dylib
+       0x105a64000 -        0x105c07fff com.coronalabs.osx.CoronaCards (1.0) <791e4c1d-4f06-3487-aa71-c9a4033de004> /Users/USER/Library/Application Support/Steam/*/Progressbar95.app/Contents/Frameworks/CoronaCards.framework/Versions/A/CoronaCards
+       0x105364000 -        0x105373fff network.dylib (*) <4ff34c18-d91c-32f5-b47c-d46baec6a234> /Users/USER/Library/Application Support/Steam/*/Progressbar95.app/Contents/Frameworks/CoronaCards.framework/Versions/A/Frameworks/network.dylib
+       0x105390000 -        0x10539ffff net.playcontrol.ALmixer (1.0) <2e50abb0-2514-362f-b23e-6b7d68e625db> /Users/USER/Library/Application Support/Steam/*/Progressbar95.app/Contents/Frameworks/CoronaCards.framework/Versions/A/Frameworks/ALmixer.framework/Versions/A/ALmixer
+       0x1053cc000 -        0x1053effff gameoverlayrenderer.dylib (*) <912c16c2-96d2-3fa1-bcf3-6507db745096> /Users/USER/Library/Application Support/Steam/*/gameoverlayrenderer.dylib
+       0x105304000 -        0x105307fff steamloader.dylib (*) <55351eef-ebc3-365f-87bf-c717d7b4625d> /Users/USER/Library/Application Support/Steam/*/steamloader.dylib
+       0x104e8c000 -        0x104e93fff com.example.Progressbar95 (1.0.2.0) <a2ff695f-d742-3ff1-bbaf-4acec2eec0af> /Users/USER/Library/Application Support/Steam/*/Progressbar95.app/Contents/MacOS/Progressbar95
+       0x1ec1b2000 -        0x1ec311fff GLEngine (*) <3b133563-3e60-39c8-8220-ad69f46bfd24> /System/Library/Frameworks/OpenGL.framework/Versions/A/Resources/GLEngine.bundle/GLEngine
+       0x1ebfbb000 -        0x1ebfcbffb com.apple.opengl (21.0.19) <cc52ab27-6883-3d08-a807-f273d010cc3d> /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
+       0x18703b000 -        0x188366fff com.apple.AppKit (6.9) <873e5da0-bc01-399b-bf60-4066922d6a17> /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+       0x18b96c000 -        0x18bd34fff com.apple.QuartzCore (1.11) <fdf04ced-461a-3e20-8e8e-22a69c0b1a5f> /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+       0x18381a000 -        0x183cf1fff com.apple.CoreFoundation (6.9) <6030a572-b731-3f46-b3a0-2598fbb98c9a> /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+       0x18de2e000 -        0x18e0edfff com.apple.HIToolbox (2.1.1) <db8a8b63-7bfb-384b-b0a9-c124675fbb39> /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+       0x183433000 -        0x1834c7387 dyld (*) <50746901-db0e-39a0-b391-baaa6b82ad0f> /usr/lib/dyld
+               0x0 - 0xffffffffffffffff ??? (*) <00000000-0000-0000-0000-000000000000> ???
+       0x1837b3000 -        0x1837bfff3 libsystem_pthread.dylib (*) <449bbad3-f7ef-371d-9a59-fd4ffa78289b> /usr/lib/system/libsystem_pthread.dylib
+       0x183778000 -        0x1837b2fff libsystem_kernel.dylib (*) <a7228b5d-53c7-3fe9-84e4-2a8c04dcf051> /usr/lib/system/libsystem_kernel.dylib
+       0x18db58000 -        0x18db81fff com.apple.audio.caulk (1.0) <f3096db3-a767-3de6-b0ba-a9b44476c5f2> /System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk
+       0x185df1000 -        0x1864e4fff com.apple.audio.CoreAudio (5.0) <b309c860-61a6-3c72-8ec6-98d944053025> /System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio
+       0x18364f000 -        0x1836cdffb libsystem_c.dylib (*) <cc7a439e-f104-3047-995c-9a5a3cc4a442> /usr/lib/system/libsystem_c.dylib
+
+External Modification Summary:
+  Calls made by other processes targeting this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by all processes on this machine:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+
+VM Region Summary:
+ReadOnly portion of Libraries: Total=1.5G resident=0K(0%) swapped_out_or_unallocated=1.5G(100%)
+Writable regions: Total=1.7G written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=1.7G(100%)
+
+                                VIRTUAL   REGION 
+REGION TYPE                        SIZE    COUNT (non-coalesced) 
+===========                     =======  ======= 
+Accelerate framework               256K        2 
+Activity Tracing                   256K        1 
+CG image                          10.4M       12 
+ColorSync                          624K       29 
+CoreAnimation                      592K       37 
+CoreGraphics                        32K        2 
+CoreGraphics (reserved)             16K        1         reserved VM address space (unallocated)
+CoreUI image data                 1216K        8 
+Foundation                          16K        1 
+Image IO                          12.0M        7 
+Kernel Alloc Once                   32K        1 
+MALLOC                             1.6G       78 
+MALLOC guard page                  384K       24 
+OpenGL GLSL                        256K        3 
+STACK GUARD                       56.2M       15 
+Stack                             15.4M       15 
+VM_ALLOCATE                        896K       23 
+__AUTH                            1773K      348 
+__AUTH_CONST                      28.3M      554 
+__CTF                               824        1 
+__DATA                            13.9M      567 
+__DATA_CONST                      30.2M      579 
+__DATA_DIRTY                      1787K      206 
+__FONT_DATA                          4K        1 
+__GLSLBUILTINS                    5174K        1 
+__LINKEDIT                       896.6M       23 
+__OBJC_RO                         71.2M        1 
+__OBJC_RW                         2171K        1 
+__TEXT                           657.3M      598 
+dyld private memory                272K        2 
+mapped file                      185.9M       59 
+shared memory                     18.7M       19 
+===========                     =======  ======= 
+TOTAL                              3.6G     3219 
+TOTAL, minus reserved VM space     3.6G     3219 
+
+
+
+-----------
+Full Report
+-----------
+
+{"app_name":"Progressbar95","timestamp":"2024-03-22 19:14:11.00 +0100","app_version":"1.0.2.0","slice_uuid":"a2ff695f-d742-3ff1-bbaf-4acec2eec0af","build_version":"2024.2.121303","platform":1,"bundleID":"com.example.Progressbar95","share_with_app_devs":0,"is_first_party":0,"bug_type":"309","os_version":"macOS 14.3.1 (23D60)","roots_installed":0,"name":"Progressbar95","incident_id":"E4BA1252-8554-4BB6-8501-B6A72FECFE84"}
+{
+  "uptime" : 170000,
+  "procRole" : "Foreground",
+  "version" : 2,
+  "userID" : 502,
+  "deployVersion" : 210,
+  "modelCode" : "MacBookPro18,3",
+  "coalitionID" : 39124,
+  "osVersion" : {
+    "train" : "macOS 14.3.1",
+    "build" : "23D60",
+    "releaseType" : "User"
+  },
+  "captureTime" : "2024-03-22 19:14:11.3033 +0100",
+  "codeSigningMonitor" : 1,
+  "incident" : "E4BA1252-8554-4BB6-8501-B6A72FECFE84",
+  "pid" : 15629,
+  "translated" : false,
+  "cpuType" : "ARM-64",
+  "roots_installed" : 0,
+  "bug_type" : "309",
+  "procLaunch" : "2024-03-22 19:14:08.6146 +0100",
+  "procStartAbsTime" : 4273889374617,
+  "procExitAbsTime" : 4273952793262,
+  "procName" : "Progressbar95",
+  "procPath" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/Progressbar95.app\/Contents\/MacOS\/Progressbar95",
+  "bundleInfo" : {"CFBundleShortVersionString":"1.0.2.0","CFBundleVersion":"2024.2.121303","CFBundleIdentifier":"com.example.Progressbar95"},
+  "storeInfo" : {"deviceIdentifierForVendor":"B4F84F88-8F1B-55EF-AC17-B0BDD9ADD047","thirdParty":true},
+  "parentProc" : "launchd",
+  "parentPid" : 1,
+  "coalitionName" : "com.example.Progressbar95",
+  "crashReporterKey" : "AEC90528-CB7C-D8C8-D513-823044636BA7",
+  "lowPowerMode" : 1,
+  "codeSigningID" : "",
+  "codeSigningTeamID" : "",
+  "codeSigningValidationCategory" : 0,
+  "codeSigningTrustLevel" : 4294967295,
+  "instructionByteStream" : {"beforePC":"9E++qf17Aan9QwCR8wMAqhT8QfmUAAC1aEpA+RRVQvn0AQC0iBZA+Q==","atPC":"CLlAuSgDADWIGkD5CEVBOcgCADWIDZFSaAIIiwoBQLmJGkC5XwEJaw=="},
+  "wakeTime" : 1721,
+  "sleepWakeUUID" : "D59E4373-4670-4C23-9D8F-301771DAEF08",
+  "sip" : "disabled",
+  "vmRegionInfo" : "0xb8 is not in any region.  Bytes before following region: 4377329480\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      __TEXT                      104e8c000-104e94000    [   32K] r-x\/r-x SM=COW  ...Progressbar95",
+  "exception" : {"codes":"0x0000000000000001, 0x00000000000000b8","rawCodes":[1,184],"type":"EXC_BAD_ACCESS","signal":"SIGSEGV","subtype":"KERN_INVALID_ADDRESS at 0x00000000000000b8"},
+  "termination" : {"flags":0,"code":11,"namespace":"SIGNAL","indicator":"Segmentation fault: 11","byProc":"exc handler","byPid":15629},
+  "vmregioninfo" : "0xb8 is not in any region.  Bytes before following region: 4377329480\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      __TEXT                      104e8c000-104e94000    [   32K] r-x\/r-x SM=COW  ...Progressbar95",
+  "extMods" : {"caller":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"system":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"targeted":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"warnings":0},
+  "faultingThread" : 0,
+  "threads" : [{"threadState":{"x":[{"value":4697882624},{"value":2147483648},{"value":3600},{"value":2252},{"value":3600},{"value":2252},{"value":0},{"value":0},{"value":0},{"value":4294967295},{"value":4697920544},{"value":4697671048},{"value":4697919108},{"value":1},{"value":4697926800},{"value":0},{"value":4697919115},{"value":0},{"value":0},{"value":4697882624},{"value":105553120003904},{"value":0},{"value":4846643548},{"value":4846643488},{"value":105553120357760},{"value":105553120026496},{"value":105553120003904},{"value":105553120032000},{"value":4697926908}],"flavor":"ARM_THREAD_STATE64","lr":{"value":5046705599400054812},"cpsr":{"value":536875008},"fp":{"value":6089539024},"sp":{"value":6089539008},"esr":{"value":2449473542,"description":"(Data Abort) byte read Translation fault"},"pc":{"value":4466336260,"matchesCrashFrame":1},"far":{"value":184}},"id":3551405,"triggered":true,"name":"MainThrd","queue":"com.apple.main-thread","frames":[{"imageOffset":238084,"symbol":"gldUpdateReadFramebuffer","symbolLocation":48,"imageIndex":13},{"imageOffset":249884,"symbol":"gldPresentFramebufferData","symbolLocation":800,"imageIndex":13},{"imageOffset":103112,"symbol":"glSwap_Exec","symbolLocation":132,"imageIndex":21},{"imageOffset":58288,"symbol":"CGLFlushDrawable","symbolLocation":64,"imageIndex":22},{"imageOffset":73480,"imageIndex":18},{"imageOffset":3041476,"symbol":"-[NSOpenGLContext flushBuffer]","symbolLocation":28,"imageIndex":23},{"imageOffset":7935096,"symbol":"-[_NSOpenGLViewBackingLayer display]","symbolLocation":716,"imageIndex":23},{"imageOffset":129852,"symbol":"CA::Layer::display_if_needed(CA::Transaction*)","symbolLocation":736,"imageIndex":24},{"imageOffset":1723812,"symbol":"CA::Context::commit_transaction(CA::Transaction*, double, double*)","symbolLocation":512,"imageIndex":24},{"imageOffset":10480,"symbol":"CA::Transaction::commit()","symbolLocation":648,"imageIndex":24},{"imageOffset":1448728,"symbol":"__62+[CATransaction(NSCATransaction) NS_setFlushesWithDisplayLink]_block_invoke","symbolLocation":272,"imageIndex":23},{"imageOffset":11632388,"symbol":"___NSRunLoopObserverCreateWithHandler_block_invoke","symbolLocation":64,"imageIndex":23},{"imageOffset":511360,"symbol":"__CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__","symbolLocation":36,"imageIndex":25},{"imageOffset":511084,"symbol":"__CFRunLoopDoObservers","symbolLocation":532,"imageIndex":25},{"imageOffset":508572,"symbol":"__CFRunLoopRun","symbolLocation":776,"imageIndex":25},{"imageOffset":506172,"symbol":"CFRunLoopRunSpecific","symbolLocation":608,"imageIndex":25},{"imageOffset":197704,"symbol":"RunCurrentEventLoopInMode","symbolLocation":292,"imageIndex":26},{"imageOffset":197252,"symbol":"ReceiveNextEventCommon","symbolLocation":648,"imageIndex":26},{"imageOffset":196572,"symbol":"_BlockUntilNextEventMatchingListInModeWithFilter","symbolLocation":76,"imageIndex":26},{"imageOffset":237264,"symbol":"_DPSNextEvent","symbolLocation":660,"imageIndex":23},{"imageOffset":8539884,"symbol":"-[NSApplication(NSEventRouting) _nextEventMatchingEventMask:untilDate:inMode:dequeue:]","symbolLocation":716,"imageIndex":23},{"imageOffset":112380,"imageIndex":18},{"imageOffset":185212,"symbol":"-[NSApplication run]","symbolLocation":476,"imageIndex":23},{"imageOffset":17984,"symbol":"NSApplicationMain","symbolLocation":880,"imageIndex":23},{"imageOffset":24800,"symbol":"start","symbolLocation":2360,"imageIndex":27}]},{"id":3551421,"frames":[{"imageOffset":7720,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":29}],"threadState":{"x":[{"value":6090108928},{"value":5635},{"value":6089572352},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6090108928},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6500863528},"far":{"value":0}}},{"id":3551422,"frames":[{"imageOffset":7720,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":29}],"threadState":{"x":[{"value":6090682368},{"value":10499},{"value":6090145792},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6090682368},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6500863528},"far":{"value":0}}},{"id":3551426,"frames":[{"imageOffset":7720,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":29}],"threadState":{"x":[{"value":6091255808},{"value":31247},{"value":6090719232},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6091255808},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6500863528},"far":{"value":0}}},{"id":3551427,"frames":[{"imageOffset":7720,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":29}],"threadState":{"x":[{"value":6091829248},{"value":30979},{"value":6091292672},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6091829248},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6500863528},"far":{"value":0}}},{"id":3551431,"name":"caulk.messenger.shared:17","threadState":{"x":[{"value":14},{"value":105553143350522},{"value":0},{"value":6092402794},{"value":105553143350496},{"value":25},{"value":0},{"value":0},{"value":0},{"value":4294967295},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":18446744073709551580},{"value":8104512256},{"value":0},{"value":105553152505280},{"value":105553152505280},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6672459408},"cpsr":{"value":2147487744},"fp":{"value":6092402560},"sp":{"value":6092402528},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6500620272},"far":{"value":0}},"frames":[{"imageOffset":6128,"symbol":"semaphore_wait_trap","symbolLocation":8,"imageIndex":30},{"imageOffset":9872,"symbol":"caulk::semaphore::timed_wait(double)","symbolLocation":212,"imageIndex":31},{"imageOffset":9540,"symbol":"caulk::concurrent::details::worker_thread::run()","symbolLocation":36,"imageIndex":31},{"imageOffset":8772,"symbol":"void* caulk::thread_proxy<std::__1::tuple<caulk::thread::attributes, void (caulk::concurrent::details::worker_thread::*)(), std::__1::tuple<caulk::concurrent::details::worker_thread*>>>(void*)","symbolLocation":96,"imageIndex":31},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":29},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":29}]},{"id":3551432,"name":"caulk.messenger.shared:high","threadState":{"x":[{"value":14},{"value":41475},{"value":41475},{"value":19},{"value":4294967295},{"value":0},{"value":0},{"value":0},{"value":0},{"value":4294967295},{"value":1},{"value":105553140778264},{"value":0},{"value":0},{"value":0},{"value":0},{"value":18446744073709551580},{"value":8104512256},{"value":0},{"value":105553152505072},{"value":105553152505072},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6672459408},"cpsr":{"value":2147487744},"fp":{"value":6092976000},"sp":{"value":6092975968},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6500620272},"far":{"value":0}},"frames":[{"imageOffset":6128,"symbol":"semaphore_wait_trap","symbolLocation":8,"imageIndex":30},{"imageOffset":9872,"symbol":"caulk::semaphore::timed_wait(double)","symbolLocation":212,"imageIndex":31},{"imageOffset":9540,"symbol":"caulk::concurrent::details::worker_thread::run()","symbolLocation":36,"imageIndex":31},{"imageOffset":8772,"symbol":"void* caulk::thread_proxy<std::__1::tuple<caulk::thread::attributes, void (caulk::concurrent::details::worker_thread::*)(), std::__1::tuple<caulk::concurrent::details::worker_thread*>>>(void*)","symbolLocation":96,"imageIndex":31},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":29},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":29}]},{"id":3551476,"name":"caulk::deferred_logger","threadState":{"x":[{"value":14},{"value":105553180757879},{"value":0},{"value":6093549671},{"value":105553180757856},{"value":22},{"value":0},{"value":0},{"value":0},{"value":4294967295},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":18446744073709551580},{"value":8104512256},{"value":0},{"value":105553150555992},{"value":105553150555992},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6672459408},"cpsr":{"value":2147487744},"fp":{"value":6093549440},"sp":{"value":6093549408},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6500620272},"far":{"value":0}},"frames":[{"imageOffset":6128,"symbol":"semaphore_wait_trap","symbolLocation":8,"imageIndex":30},{"imageOffset":9872,"symbol":"caulk::semaphore::timed_wait(double)","symbolLocation":212,"imageIndex":31},{"imageOffset":9540,"symbol":"caulk::concurrent::details::worker_thread::run()","symbolLocation":36,"imageIndex":31},{"imageOffset":8772,"symbol":"void* caulk::thread_proxy<std::__1::tuple<caulk::thread::attributes, void (caulk::concurrent::details::worker_thread::*)(), std::__1::tuple<caulk::concurrent::details::worker_thread*>>>(void*)","symbolLocation":96,"imageIndex":31},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":29},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":29}]},{"id":3551477,"name":"com.apple.audio.IOThread.client","threadState":{"x":[{"value":268451845},{"value":17179869187},{"value":103079215123},{"value":80387},{"value":764504178688},{"value":348558070906880},{"value":32},{"value":0},{"value":18446744073709550527},{"value":81155},{"value":178},{"value":1},{"value":81155},{"value":0},{"value":0},{"value":239041773568000},{"value":18446744073709551569},{"value":8104506760},{"value":0},{"value":0},{"value":32},{"value":348558070906880},{"value":764504178688},{"value":80387},{"value":6094122192},{"value":103079215123},{"value":17179869187},{"value":17179869187},{"value":3}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6500695280},"cpsr":{"value":536875008},"fp":{"value":6094121856},"sp":{"value":6094121776},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6500620404},"far":{"value":0}},"frames":[{"imageOffset":6260,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":30},{"imageOffset":81136,"symbol":"mach_msg2_internal","symbolLocation":80,"imageIndex":30},{"imageOffset":42160,"symbol":"mach_msg_overwrite","symbolLocation":476,"imageIndex":30},{"imageOffset":7160,"symbol":"mach_msg","symbolLocation":24,"imageIndex":30},{"imageOffset":3229792,"symbol":"HALB_MachPort::SendSimpleMessageWithSimpleReply(unsigned int, unsigned int, int, int&, bool, unsigned int)","symbolLocation":96,"imageIndex":32},{"imageOffset":2012100,"symbol":"HALC_ProxyIOContext::IOWorkLoop()","symbolLocation":4260,"imageIndex":32},{"imageOffset":2006000,"symbol":"invocation function for block in HALC_ProxyIOContext::HALC_ProxyIOContext(unsigned int, unsigned int)","symbolLocation":108,"imageIndex":32},{"imageOffset":3575596,"symbol":"HALC_IOThread::Entry(void*)","symbolLocation":88,"imageIndex":32},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":29},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":29}]},{"id":3551505,"frames":[{"imageOffset":20072,"symbol":"__semwait_signal","symbolLocation":8,"imageIndex":30},{"imageOffset":54008,"symbol":"nanosleep","symbolLocation":220,"imageIndex":33},{"imageOffset":53776,"symbol":"usleep","symbolLocation":68,"imageIndex":33},{"imageOffset":14868,"symbol":"Stream_Data_Thread_Callback","symbolLocation":144,"imageIndex":17},{"imageOffset":45752,"symbol":"Internal_RunThread","symbolLocation":52,"imageIndex":17},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":29},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":29}],"threadState":{"x":[{"value":4},{"value":0},{"value":1},{"value":1},{"value":0},{"value":10000000},{"value":0},{"value":0},{"value":7953018680,"symbolLocation":0,"symbol":"clock_sem"},{"value":3},{"value":17},{"value":2},{"value":105553140918120},{"value":0},{"value":1612710391},{"value":503},{"value":334},{"value":8104522536},{"value":0},{"value":0},{"value":6094696160},{"value":4382670848},{"value":4382648222},{"value":4382670848},{"value":72},{"value":0},{"value":4382670848},{"value":4382670848},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6499451640},"cpsr":{"value":2684358656},"fp":{"value":6094696144},"sp":{"value":6094696096},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6500634216},"far":{"value":0}}},{"id":3551528,"frames":[{"imageOffset":7720,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":29}],"threadState":{"x":[{"value":6095269888},{"value":119495},{"value":6094733312},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6095269888},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6500863528},"far":{"value":0}}},{"id":3551540,"name":"com.apple.NSEventThread","threadState":{"x":[{"value":268451845},{"value":21592279046},{"value":8589934592},{"value":396953762398208},{"value":0},{"value":396953762398208},{"value":2},{"value":4294967295},{"value":18446744073709550527},{"value":92423},{"value":0},{"value":1},{"value":92423},{"value":695209},{"value":0},{"value":0},{"value":18446744073709551569},{"value":8104506760},{"value":0},{"value":4294967295},{"value":2},{"value":396953762398208},{"value":0},{"value":396953762398208},{"value":6095839336},{"value":8589934592},{"value":21592279046},{"value":21592279046},{"value":4412409862}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6500695280},"cpsr":{"value":4096},"fp":{"value":6095839184},"sp":{"value":6095839104},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6500620404},"far":{"value":0}},"frames":[{"imageOffset":6260,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":30},{"imageOffset":81136,"symbol":"mach_msg2_internal","symbolLocation":80,"imageIndex":30},{"imageOffset":42160,"symbol":"mach_msg_overwrite","symbolLocation":476,"imageIndex":30},{"imageOffset":7160,"symbol":"mach_msg","symbolLocation":24,"imageIndex":30},{"imageOffset":514948,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":160,"imageIndex":25},{"imageOffset":509004,"symbol":"__CFRunLoopRun","symbolLocation":1208,"imageIndex":25},{"imageOffset":506172,"symbol":"CFRunLoopRunSpecific","symbolLocation":608,"imageIndex":25},{"imageOffset":1454432,"symbol":"_NSEventThread","symbolLocation":144,"imageIndex":23},{"imageOffset":28724,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":29},{"imageOffset":7740,"symbol":"thread_start","symbolLocation":8,"imageIndex":29}]},{"id":3551615,"frames":[{"imageOffset":7720,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":29}],"threadState":{"x":[{"value":6130561024},{"value":117599},{"value":6130024448},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6130561024},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6500863528},"far":{"value":0}}},{"id":3551616,"frames":[{"imageOffset":7720,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":29}],"threadState":{"x":[{"value":6131134464},{"value":117283},{"value":6130597888},{"value":0},{"value":409604},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6131134464},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6500863528},"far":{"value":0}}},{"id":3551617,"frames":[{"imageOffset":7720,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":29}],"threadState":{"x":[{"value":6131707904},{"value":0},{"value":6131171328},{"value":0},{"value":278532},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6131707904},"esr":{"value":0,"description":" Address size fault"},"pc":{"value":6500863528},"far":{"value":0}}}],
+  "usedImages" : [
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 5176983552,
+    "CFBundleShortVersionString" : "7.0",
+    "CFBundleIdentifier" : "com.apple.audio.codecs.Components",
+    "size" : 9289728,
+    "uuid" : "d4d6ca9f-abef-319f-aca0-1fbdbf4df379",
+    "path" : "\/System\/Library\/Components\/AudioCodecs.component\/Contents\/MacOS\/AudioCodecs",
+    "name" : "AudioCodecs",
+    "CFBundleVersion" : "7.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 5100273664,
+    "CFBundleShortVersionString" : "1.0",
+    "CFBundleIdentifier" : "com.apple.audio.AudioDSPComponents",
+    "size" : 10289152,
+    "uuid" : "dc182fc2-dd27-39e3-b3fd-acfb178f67f0",
+    "path" : "\/System\/Library\/Components\/AudioDSP.component\/Contents\/MacOS\/AudioDSP",
+    "name" : "AudioDSP",
+    "CFBundleVersion" : "1"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 4841209856,
+    "CFBundleShortVersionString" : "1.14",
+    "CFBundleIdentifier" : "com.apple.audio.units.Components",
+    "size" : 1277952,
+    "uuid" : "ad1547a3-5cdf-3a4b-8348-c8a3a7c78cc9",
+    "path" : "\/System\/Library\/Components\/CoreAudio.component\/Contents\/MacOS\/CoreAudio",
+    "name" : "CoreAudio",
+    "CFBundleVersion" : "1.14"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4924129280,
+    "size" : 21561344,
+    "uuid" : "e73dde52-7ac1-35c5-961f-862224ac0e4f",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/steamclient.dylib",
+    "name" : "steamclient.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4832673792,
+    "size" : 114688,
+    "uuid" : "dc526769-313d-3fc7-a1d2-7c68bb3744af",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/libtier0_s.dylib",
+    "name" : "libtier0_s.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4831838208,
+    "size" : 180224,
+    "uuid" : "c1ff8178-ea49-39dd-9cba-9c709b443c78",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/libvstdlib_s.dylib",
+    "name" : "libvstdlib_s.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4833296384,
+    "size" : 65536,
+    "uuid" : "377940f8-84c0-39e0-b142-275d3fa487d5",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/libaudio.dylib",
+    "name" : "libaudio.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4832903168,
+    "size" : 98304,
+    "uuid" : "cf413730-0e42-3290-bdfe-07a887035c32",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/crashhandler.dylib",
+    "name" : "crashhandler.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4833083392,
+    "CFBundleIdentifier" : "com.googlecode.google-breakpad",
+    "size" : 32768,
+    "uuid" : "eb859872-955a-315d-9ce1-87fb57f7c4cd",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/Breakpad.framework\/Versions\/A\/Breakpad",
+    "name" : "Breakpad",
+    "CFBundleVersion" : "1.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4833918976,
+    "size" : 65536,
+    "uuid" : "f81b68a1-e8e8-3f7c-8e42-be3c57699fc9",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/Breakpad.framework\/Versions\/A\/Resources\/breakpadUtilities.dylib",
+    "name" : "breakpadUtilities.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4697030656,
+    "size" : 131072,
+    "uuid" : "3f2bdaeb-1cca-337b-bdca-464a2e5b01dc",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/Progressbar95.app\/Contents\/Plugins\/plugin_steamworks.dylib",
+    "name" : "plugin_steamworks.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4832460800,
+    "size" : 49152,
+    "uuid" : "99b16acf-04cf-3fc6-80a6-9bc69fb1d440",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/Progressbar95.app\/Contents\/Plugins\/libsteam_api.dylib",
+    "name" : "libsteam_api.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4605149184,
+    "size" : 16384,
+    "uuid" : "6b2f013c-780d-38dd-8cae-2b53e10f8ce1",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/Progressbar95.app\/Contents\/Plugins\/plugin_utf8.dylib",
+    "name" : "plugin_utf8.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 4466098176,
+    "CFBundleShortVersionString" : "1.0",
+    "CFBundleIdentifier" : "com.apple.AppleMetalOpenGLRenderer",
+    "size" : 442368,
+    "uuid" : "72c22333-9dbf-3856-99f1-716fc2b10726",
+    "path" : "\/System\/Library\/Extensions\/AppleMetalOpenGLRenderer.bundle\/Contents\/MacOS\/AppleMetalOpenGLRenderer",
+    "name" : "AppleMetalOpenGLRenderer",
+    "CFBundleVersion" : "1"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 4380540928,
+    "size" : 49152,
+    "uuid" : "39d1d8d0-6996-3bd4-8ce9-39512bb65c82",
+    "path" : "\/usr\/lib\/libobjc-trampolines.dylib",
+    "name" : "libobjc-trampolines.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4389748736,
+    "CFBundleShortVersionString" : "1.0",
+    "CFBundleIdentifier" : "com.coronalabs.osx.CoronaCards",
+    "size" : 1720320,
+    "uuid" : "791e4c1d-4f06-3487-aa71-c9a4033de004",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/Progressbar95.app\/Contents\/Frameworks\/CoronaCards.framework\/Versions\/A\/CoronaCards",
+    "name" : "CoronaCards",
+    "CFBundleVersion" : "1"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4382408704,
+    "size" : 65536,
+    "uuid" : "4ff34c18-d91c-32f5-b47c-d46baec6a234",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/Progressbar95.app\/Contents\/Frameworks\/CoronaCards.framework\/Versions\/A\/Frameworks\/network.dylib",
+    "name" : "network.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4382588928,
+    "CFBundleShortVersionString" : "1.0",
+    "CFBundleIdentifier" : "net.playcontrol.ALmixer",
+    "size" : 65536,
+    "uuid" : "2e50abb0-2514-362f-b23e-6b7d68e625db",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/Progressbar95.app\/Contents\/Frameworks\/CoronaCards.framework\/Versions\/A\/Frameworks\/ALmixer.framework\/Versions\/A\/ALmixer",
+    "name" : "ALmixer",
+    "CFBundleVersion" : "1"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4382834688,
+    "size" : 147456,
+    "uuid" : "912c16c2-96d2-3fa1-bcf3-6507db745096",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/gameoverlayrenderer.dylib",
+    "name" : "gameoverlayrenderer.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4382015488,
+    "size" : 16384,
+    "uuid" : "55351eef-ebc3-365f-87bf-c717d7b4625d",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/steamloader.dylib",
+    "name" : "steamloader.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4377329664,
+    "CFBundleShortVersionString" : "1.0.2.0",
+    "CFBundleIdentifier" : "com.example.Progressbar95",
+    "size" : 32768,
+    "uuid" : "a2ff695f-d742-3ff1-bbaf-4acec2eec0af",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/Progressbar95.app\/Contents\/MacOS\/Progressbar95",
+    "name" : "Progressbar95",
+    "CFBundleVersion" : "2024.2.121303"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 8256167936,
+    "size" : 1441792,
+    "uuid" : "3b133563-3e60-39c8-8220-ad69f46bfd24",
+    "path" : "\/System\/Library\/Frameworks\/OpenGL.framework\/Versions\/A\/Resources\/GLEngine.bundle\/GLEngine",
+    "name" : "GLEngine"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 8254107648,
+    "CFBundleShortVersionString" : "21.0.19",
+    "CFBundleIdentifier" : "com.apple.opengl",
+    "size" : 69628,
+    "uuid" : "cc52ab27-6883-3d08-a807-f273d010cc3d",
+    "path" : "\/System\/Library\/Frameworks\/OpenGL.framework\/Versions\/A\/OpenGL",
+    "name" : "OpenGL",
+    "CFBundleVersion" : "21.0.19"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6560133120,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.AppKit",
+    "size" : 20103168,
+    "uuid" : "873e5da0-bc01-399b-bf60-4066922d6a17",
+    "path" : "\/System\/Library\/Frameworks\/AppKit.framework\/Versions\/C\/AppKit",
+    "name" : "AppKit",
+    "CFBundleVersion" : "2487.40.107"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6636879872,
+    "CFBundleShortVersionString" : "1.11",
+    "CFBundleIdentifier" : "com.apple.QuartzCore",
+    "size" : 3969024,
+    "uuid" : "fdf04ced-461a-3e20-8e8e-22a69c0b1a5f",
+    "path" : "\/System\/Library\/Frameworks\/QuartzCore.framework\/Versions\/A\/QuartzCore",
+    "name" : "QuartzCore",
+    "CFBundleVersion" : "1114.6"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6501277696,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.CoreFoundation",
+    "size" : 5079040,
+    "uuid" : "6030a572-b731-3f46-b3a0-2598fbb98c9a",
+    "path" : "\/System\/Library\/Frameworks\/CoreFoundation.framework\/Versions\/A\/CoreFoundation",
+    "name" : "CoreFoundation",
+    "CFBundleVersion" : "2303"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6675423232,
+    "CFBundleShortVersionString" : "2.1.1",
+    "CFBundleIdentifier" : "com.apple.HIToolbox",
+    "size" : 2883584,
+    "uuid" : "db8a8b63-7bfb-384b-b0a9-c124675fbb39",
+    "path" : "\/System\/Library\/Frameworks\/Carbon.framework\/Versions\/A\/Frameworks\/HIToolbox.framework\/Versions\/A\/HIToolbox",
+    "name" : "HIToolbox"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6497185792,
+    "size" : 607112,
+    "uuid" : "50746901-db0e-39a0-b391-baaa6b82ad0f",
+    "path" : "\/usr\/lib\/dyld",
+    "name" : "dyld"
+  },
+  {
+    "size" : 0,
+    "source" : "A",
+    "base" : 0,
+    "uuid" : "00000000-0000-0000-0000-000000000000"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6500855808,
+    "size" : 53236,
+    "uuid" : "449bbad3-f7ef-371d-9a59-fd4ffa78289b",
+    "path" : "\/usr\/lib\/system\/libsystem_pthread.dylib",
+    "name" : "libsystem_pthread.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6500614144,
+    "size" : 241664,
+    "uuid" : "a7228b5d-53c7-3fe9-84e4-2a8c04dcf051",
+    "path" : "\/usr\/lib\/system\/libsystem_kernel.dylib",
+    "name" : "libsystem_kernel.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6672449536,
+    "CFBundleShortVersionString" : "1.0",
+    "CFBundleIdentifier" : "com.apple.audio.caulk",
+    "size" : 172032,
+    "uuid" : "f3096db3-a767-3de6-b0ba-a9b44476c5f2",
+    "path" : "\/System\/Library\/PrivateFrameworks\/caulk.framework\/Versions\/A\/caulk",
+    "name" : "caulk"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6540955648,
+    "CFBundleShortVersionString" : "5.0",
+    "CFBundleIdentifier" : "com.apple.audio.CoreAudio",
+    "size" : 7290880,
+    "uuid" : "b309c860-61a6-3c72-8ec6-98d944053025",
+    "path" : "\/System\/Library\/Frameworks\/CoreAudio.framework\/Versions\/A\/CoreAudio",
+    "name" : "CoreAudio",
+    "CFBundleVersion" : "5.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6499397632,
+    "size" : 520188,
+    "uuid" : "cc7a439e-f104-3047-995c-9a5a3cc4a442",
+    "path" : "\/usr\/lib\/system\/libsystem_c.dylib",
+    "name" : "libsystem_c.dylib"
+  }
+],
+  "sharedCache" : {
+  "base" : 6496436224,
+  "size" : 4065345536,
+  "uuid" : "c32b200e-cf99-3583-bc9f-b7fb11382e8f"
+},
+  "vmSummary" : "ReadOnly portion of Libraries: Total=1.5G resident=0K(0%) swapped_out_or_unallocated=1.5G(100%)\nWritable regions: Total=1.7G written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=1.7G(100%)\n\n                                VIRTUAL   REGION \nREGION TYPE                        SIZE    COUNT (non-coalesced) \n===========                     =======  ======= \nAccelerate framework               256K        2 \nActivity Tracing                   256K        1 \nCG image                          10.4M       12 \nColorSync                          624K       29 \nCoreAnimation                      592K       37 \nCoreGraphics                        32K        2 \nCoreGraphics (reserved)             16K        1         reserved VM address space (unallocated)\nCoreUI image data                 1216K        8 \nFoundation                          16K        1 \nImage IO                          12.0M        7 \nKernel Alloc Once                   32K        1 \nMALLOC                             1.6G       78 \nMALLOC guard page                  384K       24 \nOpenGL GLSL                        256K        3 \nSTACK GUARD                       56.2M       15 \nStack                             15.4M       15 \nVM_ALLOCATE                        896K       23 \n__AUTH                            1773K      348 \n__AUTH_CONST                      28.3M      554 \n__CTF                               824        1 \n__DATA                            13.9M      567 \n__DATA_CONST                      30.2M      579 \n__DATA_DIRTY                      1787K      206 \n__FONT_DATA                          4K        1 \n__GLSLBUILTINS                    5174K        1 \n__LINKEDIT                       896.6M       23 \n__OBJC_RO                         71.2M        1 \n__OBJC_RW                         2171K        1 \n__TEXT                           657.3M      598 \ndyld private memory                272K        2 \nmapped file                      185.9M       59 \nshared memory                     18.7M       19 \n===========                     =======  ======= \nTOTAL                              3.6G     3219 \nTOTAL, minus reserved VM space     3.6G     3219 \n",
+  "legacyInfo" : {
+  "threadTriggered" : {
+    "name" : "MainThrd",
+    "queue" : "com.apple.main-thread"
+  }
+},
+  "logWritingSignature" : "6a8e4860ae52522519c6f0b79c37dc47c92fde16",
+  "trialInfo" : {
+  "rollouts" : [
+    {
+      "rolloutId" : "6425c75e4327780c10cc4252",
+      "factorPackIds" : {
+        "SIRI_HOME_AUTOMATION_INTENT_SELECTION_CACHE" : "642600a457e7664b1698eb32"
+      },
+      "deploymentId" : 240000004
+    },
+    {
+      "rolloutId" : "60356660bbe37970735c5624",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000027
+    }
+  ],
+  "experiments" : [
+    {
+      "treatmentId" : "a3f9ec09-b145-49f3-8142-da4a1f338456",
+      "experimentId" : "65f21aa774b6f500a45abd7d",
+      "deploymentId" : 400000002
+    }
+  ]
+}
+}
